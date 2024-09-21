@@ -3,6 +3,12 @@ document.getElementById('btn-add-money').addEventListener('click',function(event
     const addMoney = getInputFieldById('input-add-money');
     const pinNumber= getInputFieldById('input-pin-number')
     // console.log('add money inside addMoney.js2',addMoney, pinNumber)
+
+    // checking isNaN
+    if(isNaN(addMoney)){
+        alert('Failed to be added money');
+        return;
+    }
     if(pinNumber === 1234){
         const balance = getTextFieldValueById('account-balance')
         const newBalance = balance + addMoney;
